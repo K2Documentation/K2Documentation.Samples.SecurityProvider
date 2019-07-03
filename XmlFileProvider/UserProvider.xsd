@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="UserProvider"
+    targetNamespace="http://schemas.K2.com/security/xmlUserProvider.xsd"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    xmlns="http://schemas.K2.com/security/xmlUserProvider.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+	<xs:element name="xmlRoleProvider">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="users" type="dUsers" />
+				<xs:element name="groups" type="dGroups" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="dUsers">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="user" type="dUser"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="dGroups">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="group" type="dGroup"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="dUser">
+		<xs:attribute name="fullName" type="xs:string"/>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="email" type="xs:string"/>
+		<xs:attribute name="manager" type="xs:string"/>
+		<xs:attribute name="description" type="xs:string"/>
+		<xs:attribute name="commonName" type="xs:string"/>
+		<xs:attribute name="userPrincipalName" type="xs:string"/>
+		<xs:attribute name="objectSID" type="xs:string"/>
+		<xs:attribute name="password" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="dGroup">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="member" type="dMember"/>
+		</xs:sequence>
+		<xs:attribute name="fullName" type="xs:string"/>
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="email" type="xs:string"/>
+		<xs:attribute name="description" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="dMember">
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="type" type="dMemberType"/>
+	</xs:complexType>
+
+	<xs:simpleType name="dMemberType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value ="User"  />
+			<xs:enumeration value ="Group"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

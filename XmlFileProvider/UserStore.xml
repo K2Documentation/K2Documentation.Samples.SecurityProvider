@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<k:xmlRoleProvider xmlns:k ="http://schemas.K2.com/security/xmlUserProvider.xsd">
+  
+<!-- Provider Users -->
+  <k:users>
+		<k:user name="Test\U1" email="U1@test.com" fullName ="User 1" description="User 1 Description" commonName="U1" manager="" objectSID="1" userPrincipalName="u1@test.com" password=""/>
+		<k:user name="Test\U2" email="U2@test.com" fullName ="User 2" description="User 2 Description" commonName="U2" manager="U1" objectSID="2" userPrincipalName="u2@test.com" password=""/>
+		<k:user name="Test\U3" email="U3@test.com" fullName ="User 3" description="User 3 Description" commonName="U3" manager="U1" objectSID="3" userPrincipalName="u3@test.com" password=""/>
+		<k:user name="Test\U4" email="U4@test.com" fullName ="User 4" description="User 4 Description" commonName="U4" manager="U2" objectSID="4" userPrincipalName="u4@test.com" password=""/>
+	</k:users>
+  
+  <!-- Provider Groups and Group to User membership -->
+	<k:groups>
+		<k:group name="Test\G1" email="G1@test.com" fullName ="Group 1" description="Group 1 Description" >
+			<k:member name="Test\U1" type ="User"/>
+			<k:member name="Test\U2" type ="User"/>
+			<k:member name="Test\U3" type ="User"/>
+		</k:group>
+    <k:group name="Test\G2" email="G2@test.com" fullName ="Group 2" description="Group 2 Description" />
+	</k:groups>
+</k:xmlRoleProvider>

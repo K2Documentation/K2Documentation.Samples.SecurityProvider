@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K2Documentation.Samples.SecurityProvider.SampleSecurityProvider", "SampleSecurityProvider\K2Documentation.Samples.SecurityProvider.SampleSecurityProvider.csproj", "{5C2ADF4B-EA99-47D0-8773-982415384FBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SourceCode.Security.Providers.XmlFileProvider", "XmlFileProvider\SourceCode.Security.Providers.XmlFileProvider.csproj", "{56CF4A5E-1058-488B-9300-97686FD599A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C2ADF4B-EA99-47D0-8773-982415384FBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C2ADF4B-EA99-47D0-8773-982415384FBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C2ADF4B-EA99-47D0-8773-982415384FBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C2ADF4B-EA99-47D0-8773-982415384FBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56CF4A5E-1058-488B-9300-97686FD599A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56CF4A5E-1058-488B-9300-97686FD599A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56CF4A5E-1058-488B-9300-97686FD599A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56CF4A5E-1058-488B-9300-97686FD599A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1247148-B18F-4F45-AD6F-C94B4209E63D}
+	EndGlobalSection
+EndGlobal

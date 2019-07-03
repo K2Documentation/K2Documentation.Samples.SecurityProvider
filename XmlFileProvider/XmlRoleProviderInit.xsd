@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XmlRoleProviderInit"
+    targetNamespace="http://schemas.K2.com/security/xmlRoleProviderInit.xsd"
+    elementFormDefault="qualified"
+    attributeFormDefault="qualified"
+    xmlns="http://schemas.K2.com/security/xmlRoleProviderInit.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+	<xs:element name="roleproviderInit" >
+		<xs:complexType>
+			<xs:attribute name="userStoreFileName"  type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
